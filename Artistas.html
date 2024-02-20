@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistas</title>
+    <style>
+        .container{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 10px;
+            margin: 50px;
+        }
+        .opciones{
+            background-color: black;
+            width: 700px;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .artista{
+            width: 120px;
+            height: 170px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #descripcion {
+            width: 500px;
+            height: 100px;
+            margin: 10px auto;
+            font-size: 18px; /* Cambia el tamaño de la letra aquí */
+        }
+        .titulo {
+            font-size: 28px; /* Cambia el tamaño de la letra del título aquí */
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="opciones">
+            <img class="artista" src="pablo 2.jpg" alt="Artista 1" onclick="mostrarDescripcion('Artista 1')">
+            <img class="artista" src="duncan.jpg" alt="Artista 2" onclick="mostrarDescripcion('Artista 2')">
+            <img class="artista" src="Chris-Evans.jpg" alt="Artista 3" onclick="mostrarDescripcion('Artista 3')">
+            <img class="artista" src="burak 3.jpg" alt="Artista 4" onclick="mostrarDescripcion('Artista 4')">
+        </div>
+        <div id="descripcion"></div>
+    </div>
+    <script>
+        function mostrarDescripcion(artista) {
+            var descripcion = '';
+            switch(artista) {
+                case 'Artista 1':
+                    descripcion = '<span class="titulo"><br>Pablo Alborán</span><br>Pablo Moreno de Alborán Ferrándiz​, ​artísticamente conocido como Pablo Alborán, es un cantautor y músico español.<br><br>Nació el 31 de mayo de 1989 en Málaga, España.<br><br>Desde su debut obtuvo diez candidaturas a los Premios Grammy Latinos, tres de ellas en 2011.<br><br>A los siete años comenzó a estudiar piano clásico y guitarra, siendo Enaudi, Debussy y Satie, sus compositores clásicos preferidos. Sus primeras canciones fueron compuestas a los 12 años, etapa en la cual ya tenía decidido ser músico. ';
+                    break;
+                case 'Artista 2':
+                    descripcion = '<span class="titulo"><br>Duncan Laurence</span><br>Duncan de Moor (Spijkenisse; 11 de abril de 1994), conocido profesionalmente como Duncan Laurence, es un cantante neerlandés.<br><br>Representó a Países Bajos en el Festival de la Canción Eurovision 2019 con la canción Arcade quedando en primer lugar, con un total de 492 puntos.';
+                    break;
+                case 'Artista 3':
+                    descripcion = '<span class="titulo"><br>Chris Evans</span><br>Christopher Robert Evans, conocido simplemente como Chris Evans, es un actor y director norteamericano, nacido el 13 de julio de 1981, en Sudbury, Massachusetts, Estados Unidos.<br><br>Hijo de una bailarina y un odontólogo, Chris destacó en los deportes, debido a su físico.<br><br>Sin embargo, su verdadera pasión siempre fue la actuación.';
+                    break;
+                case 'Artista 4':
+                    descripcion = '<span class="titulo"><br>Burak Ozcivit</span><br>Modelo, actor y director turco de gran éxito en los desfiles de moda en todo el mundo.<br><br>Ganó el título de "Mejor Modelo de Turquía" y terminó segundo en el "mejor modelo del mundo".<br><br>Luego comenzó su carrera de actor trabajando en varios filmes, series y novelas, siendo muy popular.';
+                    break;
+            }
+            document.getElementById("descripcion").innerHTML = descripcion;
+        }
+    </script>
+    
+</body>
+</html>
